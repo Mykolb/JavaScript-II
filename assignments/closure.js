@@ -1,7 +1,9 @@
 // ==== Challenge 1: Write your own closure ====
 // Write a simple closure of your own creation.  Keep it simple!
-
-
+const season = 'fall';                          
+ function greatDay() {
+  const temp = '70';                                  
+   alert(`It is a ${temp} degree ${season} day`);                                             }                                                 console.log(season);
 // ==== Challenge 2: Create a counter function ====
 const counter = () => {
   // Return a function that when invoked increments and returns a counter variable.

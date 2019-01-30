@@ -58,20 +58,150 @@ const runners = [{"id":1,"first_name":"Charmain","last_name":"Seiler","email":"c
 let fullName = [];
 console.log(fullName);
 
+//I created runners1 & runners2 (using the info above) array so my forEach would work//
+runners1.forEach(function(element1,) {
+    console.log(element1.first_name);
+});
+//This forEach gave me the array for firstName//
+const firstName = [
+    "Charmain",
+    "Whitaker",
+    "Julieta",
+    "Martynne",
+    "Gussy",
+    "Yule",
+    "Kathie",
+    "Tanner",
+    "Sarina",
+    "Bertie",
+    "Trevor",
+    "Malachi",
+    "Berget",
+    "Loise",
+    "Christan",
+    "Kayla",
+    "Heddie",
+    "Mace",
+    "Nola",
+    "Nadine",
+    "Ulrikaumeko",
+    "Saunder",
+    "Carmel",
+    "Marielle",
+    "Brucie",
+    "Juan",
+    "Sacha",
+    "Jamey",
+    "Morrie",
+    "Fidel",
+    "Toni",
+    "Jessey",
+    "Karola",
+    "Marley",
+    "Marrilee",
+    "Tye",
+    "Charleen",
+    "Valma",
+    "Dollie",
+    "Minna",
+    "Jsandye",
+    "Yevette",
+    "Hank",
+    "Jodie",
+    "Falito",
+    "Reginauld",
+    "Vida",
+    "Anderea",
+    "Bel",
+    "Shell"
+      ];
+
+runners2.forEach(function(element2,) {
+    console.log(element2.last_name);
+});
+//this forEach gave me the array for lastName//
+const lastName = [
+    "Seiler",
+   "Ierland",
+   "McCloid",
+   "Paye",
+   "Raraty",
+   "Tommasetti",
+   "Majury",
+   "Branton",
+   "Lasham",
+   "Lonergan",
+   "Studd",
+   "Okeshott",
+   "Logsdail",
+   "Rivlin",
+   "Kendall",
+   "Whitwam",
+   "Heningam",
+   "Ballinger",
+   "Abberley",
+   "Tresler",
+   "Vuittet",
+   "Spennock",
+   "Woffinden",
+   "Kimmel",
+   "Burris",
+   "Berzon",
+   "Olsen",
+   "O'Nolan",
+   "Rainard",
+   "Roskelly",
+   "MacSweeney",
+   "Walhedd",
+   "Piper",
+   "Mitchenson",
+   "Thrasher",
+   "Manie",
+   "Sheering",
+   "Eynaud",
+   "McDarmid",
+   "Hymas",
+   "Frend",
+   "Hacket",
+   "Zebedee",
+   "Stawell",
+   "Karsh",
+   "Purselowe",
+   "Tydd",
+   "MacGiolla Pheadair",
+   "Alway",
+   "Baine"
+   ];
+
 // ==== Challenge 2: Use .map() ====
 // The event director needs to have all the runner's first names converted to uppercase because the director BECAME DRUNK WITH POWER. Convert each first name into all caps and log the result
 let allCaps = [];
-console.log(allCaps); 
+
+
+const newRunners = runners.map(function callback(currentValue){
+    return currentValue.first_name.toUpperCase();
+  });
+console.log(newRunners); 
 
 // ==== Challenge 3: Use .filter() ====
 // The large shirts won't be available for the event due to an ordering issue.  Get a list of runners with large sized shirts so they can choose a different size. Return an array named largeShirts that contains information about the runners that have a shirt size of L and log the result
 let largeShirts = [];
+
+
+const largeShirts = runners1.filter(runners1 => runners1.shirt_size === 'L');
+
 console.log(largeShirts);
 
 // ==== Challenge 4: Use .reduce() ====
 // The donations need to be tallied up and reported for tax purposes. Add up all the donations into a ticketPriceTotal array and log the result
-let ticketPriceTotal = [];
-console.log(ticketPriceTotal);
+let ticketPriceTotal = [];;
+
+const ticketPriceTotal = runners.reduce(function(donations, currentValue) {
+    return donations + currentValue.donations;
+  }, 0);
+  
+  console.log(ticketPriceTotal);
+
 
 // ==== Challenge 5: Be Creative ====
 // Now that you have used .forEach(), .map(), .filter(), and .reduce().  I want you to think of potential problems you could solve given the data set and the 5k fun run theme.  Try to create and then solve 3 unique problems using one or many of the array methods listed above.
